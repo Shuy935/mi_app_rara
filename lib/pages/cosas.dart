@@ -626,10 +626,38 @@ class DrawerM extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Viva mexico cabrones!'),
-      ),
-      body: Center(
+  appBar: AppBar(
+    title: const Text('Drawer Demo'),
+  ),
+  drawer: Drawer(
+    child: ListView(
+      padding: EdgeInsets.zero,
+      children: const <Widget>[
+        DrawerHeader(
+          decoration: BoxDecoration(
+            color: Colors.blue,
+          ),
+          child: Text(
+            'Aqui finaliza mi app...',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+            ),
+          ),
+        ),
+        ListTile(
+          title: Text('Gracias'),
+        ),
+        ListTile(
+          title: Text('Por'),
+        ),
+        ListTile(
+          title: Text('Usarme... :('),
+        ),
+      ],
+    ),
+  ),
+  body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -643,7 +671,7 @@ class DrawerM extends StatelessWidget {
           ],
         ),
       ),
-    );
+);
   }
 }
 
