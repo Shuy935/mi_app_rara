@@ -627,7 +627,7 @@ class DrawerM extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
   appBar: AppBar(
-    title: const Text('Drawer Demo'),
+    title: const Text('Viva mexico c@bron@s'),
   ),
   drawer: Drawer(
     child: ListView(
