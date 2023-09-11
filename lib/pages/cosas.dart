@@ -7,10 +7,10 @@ class Cosas extends StatefulWidget {
   State<Cosas> createState() => _CosasState();
 }
 
-class AppGlobals {
+class VarGlobals {
   bool isChecked = false;
-  AppGlobals._privateConstructor();
-  static final AppGlobals instance = AppGlobals._privateConstructor();
+  VarGlobals._privateConstructor();
+  static final VarGlobals instance = VarGlobals._privateConstructor();
 }
 
 class _CosasState extends State<Cosas> {
@@ -94,10 +94,10 @@ class _FormState extends State<FormApp> {
           Visibility(
             visible: _isCheckedVisible,
             child: Checkbox(
-              value: AppGlobals.instance.isChecked,
+              value: VarGlobals.instance.isChecked,
               onChanged: (bool? value) {
                 setState(() {
-                  AppGlobals.instance.isChecked = value ?? false;
+                  VarGlobals.instance.isChecked = value ?? false;
                   widget.openDatePicker();
                 });
               },
@@ -249,7 +249,7 @@ class _DatePickerExampleState extends State<DatePickerExample>
               onPressed: () {
                 Navigator.pop(context);
                 setState(() {
-                  AppGlobals.instance.isChecked = false;
+                  VarGlobals.instance.isChecked = false;
                 });
               },
               child: const Text('Volver al Formulario'),
@@ -362,7 +362,7 @@ class _NavState extends State<Nav> {
           icon: const Icon(Icons.arrow_back_ios_new),
           onPressed: () {
             setState(() {
-              AppGlobals.instance.isChecked = false;
+              VarGlobals.instance.isChecked = false;
             });
             Navigator.of(context).pop();
           },
@@ -454,7 +454,7 @@ class Scroll extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Este personaje es carnal de "el donas"'),
+          title: const Text('Selecciona al carnal de "el donas"'),
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
